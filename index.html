@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BizConsult - Consulting HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        
+
+
+
+
+ <style>
+    body{
+    margin: 0;
+    padding: 0; 
+    }
+  
+   /* Reset body */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+ /* 🔹 Top Moving Header */
+    .top-header-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #007B5E; /* Top header green */
+}
+
+.top-header {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+/* Make links black */
+.header-menu a,
+.header-actions a {
+  color: black !important;  /* override any inherited color */
+}
+
+/* Optional: hover effect for links */
+.header-menu a:hover {
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 5px;
+}
+
+/* ROWS */
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #00332A; /* optional border darker than header */
+}
+
+    .moving-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: moveText 18s linear infinite;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+
+    @keyframes moveText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* 🔹 Announcement Bar */
+    .announcement-bar {
+      position: relative;
+      overflow: hidden;
+      background-color: #f5f5f5;
+      border-bottom: 2px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .announcement-bar__inner {
+      display: flex;
+      gap: 50px;
+      white-space: nowrap;
+      position: relative;
+      left: 100%;
+    }
+
+    .announcement-bar__slide {
+      display: inline-block;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      padding: 0 10px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    @media screen and (max-width: 749px) {
+      .announcement-bar__inner {
+        gap: 20px;
+      }
+    }
+
+.header {
+  background-color: #ffffff;  
+  position: sticky;            /* scroll par chipka rahe */
+  top: 0;
+  z-index: 9999;               /* sab se upar rahe */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* soft shadow */
+}
+
+
+
+.navbar {
+  background-color: #ffffff !important; /* remove transparency */
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+    
+  /* ROWS */
+  .header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #005842; /* optional */
+  }
+
+  /* TRANSPARENT HEADER */
+ 
+
+  /* COLUMNS */
+  .header__column {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header__column--center {
+    justify-content: center;
+    flex: 1;
+  }
+
+  .header__column--right {
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  /* LOGO */
+  .header-logo img {
+    height: 50px;
+  }
+
+  /* MENU */
+  .header-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .header-menu a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+  }
+
+  /* ACTIONS */
+  .header-actions a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .header__row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header__column--center {
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .header-actions a i {
+  font-size: 18px; /* adjust icon size */
+  margin-right: 5px; /* space between icon and text */
+  color: black; /* match header text */
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.carousel-images {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  min-width: 100%;
+  flex: 0 0 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .carousel {
+    width: 100%;
+    margin: 15px auto;
+    border-radius: 10px;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    min-width: 100%;
+    flex: 0 0 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    object-fit: contain;
+  }
+}
+.about-section {
+    padding: 60px 0;
+    background: #ffffff;
+    font-family: "Poppins", Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  /* IMAGE */
+  .about-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  /* CONTENT */
+  .about-heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: #16a34a; /* green */
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+
+  .about-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .about-heading {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .about-content p {
+      text-align: center;
+    }
+  }
+.health-category {
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.category-heading {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.category-heading span {
+  width: 120px;
+  height: 2px;
+  background: #000;
+}
+
+/* ⭐ SLIM CARDS + BLACK BORDER */
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px; /* slimmer spacing */
+  max-width: 900px;  
+  margin: 0 auto; /* center grid */
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid green; /* ⭐ BLACK BORDER */
+  width: 100%;  /* full responsive */
+  max-width: 240px; /* ⭐ SMALL CARD WIDTH */
+  margin: 0 auto;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.category-card img {
+  width: 60px; /* ⭐ smaller image */
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.category-card p {
+  font-size: 14px; /* smaller text */
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+
+
+.health-tags-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.health-tags-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.health-tags-heading {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.health-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.health-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  color: #000;
+  border: 1px solid #e6e6e6;
+  border-radius: 24px;
+  font-size: 14px;
+  cursor: default;
+  transition: 0.3s ease;
+}
+
+.health-tag:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 749px) {
+  .health-tags-section {
+    padding: 40px 16px;
+  }
+
+  .health-tags-heading {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .health-tag {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+.footer-section {
+  background-color: #f8f8f8;
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-logo {
+  text-align: left;
+}
+
+.footer-logo-img {
+  width: 130px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 6px 0;
+}
+
+.footer-links ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #009970;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  display: block;
+  margin: 6px 0;
+  color: #000 !important;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #009970 !important;
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-logo-img {
+    margin: 0 auto 10px auto;
+  }
+
+  .footer-icons {
+    display: inline-block;
+  }
+}
+
+.products-section {
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.product-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  width: 90%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-name {
+  margin: 12px 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.product-price {
+  color: #009970;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-btn {
+  display: inline-block;
+  background: #009970;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product-btn:hover {
+  background: #007a5a;
+}
+
+.view-all-wrapper {
+  margin-top: 25px;
+}
+
+.view-all-btn {
+  background:  #009970;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.view-all-btn:hover {
+  background: #009970;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+
+  /* Full row stack vertically */
+  .header__row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Logo small + centered */
+  .header-logo img {
+    width: 95px !important;
+    margin: 0 auto;
+    
+  }
+
+  /* Menu center */
+  .header-menu {
+    margin-top: 10px;
+  }
+
+  .header-menu a {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  /* Icons center + smaller */
+  .header-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .header-actions a i {
+    font-size: 16px;
+  }
+}
+.header.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Mobile Responsive Cards: 2 per row on small screens */
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 15px; /* smaller gap */
+  }
+
+  .product-card {
+    padding: 8px;          /* smaller padding */
+    max-width: 100%;       /* let grid handle width */
+    margin: 0;             /* no extra margin needed */
+  }
+
+  .product-img {
+    width: 100%;           /* fit image to card */
+    height: 160px;         /* smaller height for mobile */
+  }
+
+  .product-name {
+    font-size: 16px;       /* smaller text */
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .product-btn {
+    padding: 6px 12px;     /* smaller button */
+    font-size: 14px;
+  }
+}
+
+
+/* Responsive: tablets */
+@media (max-width: 900px) {
+  .category-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+/* Responsive: mobile */
+@media (max-width: 600px) {
+  .category-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 15px; /* smaller gap */
+  }
+
+  .category-card {
+    padding: 2px; /* smaller padding */
+  }
+
+  .category-card img {
+    height: 120px; /* smaller images */
+  }
+
+  .category-card p {
+    font-size: 14px; /* smaller text */
+  }
+}
+
+.view-all-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Card style like team section */
+.team-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Parent row hover: dim all cards */
+.row.g-4:hover .team-item {
+    opacity: 0.5; /* dim non-hover cards */
+    transform: scale(0.95); /* thoda shrink for effect */
+}
+
+/* Hovered card: highlight green */
+.row.g-4 .team-item:hover {
+    transform: translateY(-10px) scale(1); /* lift hovered card */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    background: #00B98E; /* green highlight */
+    color: #fff;          /* white text on green */
+    opacity: 1;           /* full opacity */
+    z-index: 10;          /* on top of other cards */
+}
+
+/* Icon zoom on hover */
+.team-item .btn-square {
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+.team-item:hover .btn-square {
+    transform: scale(1.1);
+    background: #fff;
+    color: #00B98E;
+}
+
+/* Keep text visible with transition */
+.team-item h5,
+.team-item span {
+    transition: color 0.3s;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Top Moving Header -->
+  <div class="top-header-wrapper">
+    <div class="top-header">
+      <div class="moving-text">
+        🚑 Stay Healthy with Genuine Medicines – Order Online Anytime! 🛍️ Free Delivery on Orders Above Rs.850 🚚 Fast Delivery All Over Pakistan
+      </div>
+    </div>
+  </div>
+<header class="header">
+  <!-- TOP ROW -->
+  <div class="header__row">
+    <div class="header__column header__column--left header-logo">
+      <img src="img/logo.png" alt="Logo">
+    </div>
+
+    <div class="header__column header__column--center header-menu">
+      <a href="index.html">Home</a>
+    
+      <a href="product.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    
+  </div>
+</header>
+
+
+  <div class="carousel">
+  <div class="carousel-images" id="carousel-images">
+    <!-- <img src="img/content.jpg" alt="Slide 1"> -->
+    <img src="img/banner1.png" alt="Slide 2">
+    <img src="img/banner2 (2).png" alt="Slide 3">
+    <img src="img/banner3.png" alt="Slide 4">
+     <img src="img/banner4.png" alt="Slide 4">
+  </div>
+</div>
+
+
+
+
+<!-- About Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            
+            <!-- Image -->
+            <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+                <img class="img-fluid" src="img/about1.png" alt="About Pharmacy">
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">
+                    About Our Pharmacy
+                </div>
+
+                <h2 class="mb-4">
+                    Trusted Online Medicine & Healthcare Store
+                </h2>
+
+                <p class="mb-4">
+                    We provide high-quality medicines, healthcare products, and medical supplies at affordable prices. 
+                    Our mission is to ensure safe, genuine, and fast delivery of medicines to your doorstep.
+                </p>
+
+                <div class="row g-3 mb-4">
+
+                    <!-- Feature 1 -->
+                    <div class="col-12 d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                            <i class="fa fa-pills text-white"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h6>Genuine Medicines</h6>
+                            <span>
+                                We sell 100% authentic and certified medicines sourced from trusted manufacturers.
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="col-12 d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                            <i class="fa fa-truck-fast text-white"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h6>Fast Home Delivery</h6>
+                            <span>
+                                Get your medicines delivered quickly and safely at your home with proper packaging.
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">
+                    Learn More
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+
+
+
+
+
+
+<!-- Newsletter Start -->
+<div class="container-xxl bg-primary my-6 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container px-lg-5">
+        <div class="row align-items-center" style="height: 250px;">
+
+            <!-- Text & Email -->
+            <div class="col-12 col-md-6">
+                <h3 class="text-white">Stay Healthy with Jova Store</h3>
+                <small class="text-white">Subscribe to get latest medicines and health tips delivered to your inbox.</small>
+                <div class="position-relative w-100 mt-3">
+                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Enter Your Email" style="height: 48px;">
+                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
+                        <i class="fa fa-paper-plane text-primary fs-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-6 text-center mb-n5 d-none d-md-block">
+                <img class="img-fluid mt-5" style="max-height: 250px;" src="img/newsletter.png" alt="Medical Newsletter">
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Newsletter End -->
+
+<!-- Services Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Our Services</div>
+            <h2 class="mb-5">Providing Health & Medicine Solutions</h2>
+        </div>
+        <div class="row g-4">
+
+            <!-- Service 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded h-100">
+                    <div class="d-flex justify-content-between">
+                        <div class="service-icon">
+                            <i class="fa fa-pills fa-2x"></i>
+                        </div>
+                        <a class="service-btn" href="">
+                            <i class="fa fa-link fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="p-5">
+                        <h5 class="mb-3">Genuine Medicines</h5>
+                        <span>We provide 100% authentic medicines sourced from trusted manufacturers for all your healthcare needs.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded h-100">
+                    <div class="d-flex justify-content-between">
+                        <div class="service-icon">
+                            <i class="fa fa-truck fa-2x"></i>
+                        </div>
+                        <a class="service-btn" href="">
+                            <i class="fa fa-link fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="p-5">
+                        <h5 class="mb-3">Fast Home Delivery</h5>
+                        <span>Get your medicines delivered quickly and safely to your doorstep with proper packaging.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-item rounded h-100">
+                    <div class="d-flex justify-content-between">
+                        <div class="service-icon">
+                            <i class="fa fa-stethoscope fa-2x"></i>
+                        </div>
+                        <a class="service-btn" href="">
+                            <i class="fa fa-link fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="p-5">
+                        <h5 class="mb-3">Health Consultation</h5>
+                        <span>Our expert pharmacists provide guidance and advice for over-the-counter medicines and healthcare products.</span>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<section class="products-section">
+  <h2 class="section-title">Our Products</h2>
+  <div class="products-grid">
+
+  
+   <!-- Product 9 -->
+<div class="product-card">
+  <img src="img/product9.jpg" class="product-img" alt="E-Flar 3-in-1 Sachet">
+  <h3 class="product-name">E-Flar (3-in-1 Sachet)</h3>
+  <p class="product-price">Rs 950</p>
+  <a class="product-btn"
+     href="detail.html?name=E-Flar%20%283-in-1%20Sachet%29&price=950&img=img/product9.jpg&desc=3-in-1%20Extra%20Strength%20sachet%20containing%20Inulin%2C%20Fructo-oligosaccharides%20%28FOS%29%2C%20and%20Resistant%20Dextrin.%20For%20children%20and%20adults.%20Helps%20balance%20and%20optimize%20the%20digestive%20system%2C%20strengthen%20immune%20defense%2C%20promote%20healthy%20intestinal%20flora%2C%20and%20restore%20gut%20balance.%20Pack%20size%3A%2010%20Sachets.%20JOVA%20%28Jangda%20Group%29.">
+    View Details
+  </a>
+</div>
+
+<!-- Product 13 -->
+<div class="product-card">
+  <img src="img/product13-cropped.jpg" class="product-img" alt="Magnevo Magnesium Glycinate 500mg">
+
+  <h3 class="product-name">Magnevo Magnesium Glycinate 500mg</h3>
+
+  <p class="product-price">Rs 1,190</p>
+
+ <a class="product-btn"
+href="detail.html?name=Magnevo%20Magnesium%20Glycinate%20500mg&price=1190&img=img/product13-cropped.jpg&front=img/product13-cropped%20(1).jpg&back=img/product13-cropped%20(2).jpg&desc=Premium%20high-absorption%20Magnesium%20Glycinate%20formula%20designed%20to%20support%20deep%20restful%20sleep,%20daily%20muscle%20recovery,%20and%20overall%20nervous%20system%20health%20without%20stomach%20discomfort.">
+View Details
+</a>
+</div>
+
+<!-- Product 14 -->
+<div class="product-card">
+  <img src="img/product14-cropped.jpg" class="product-img" alt="Glutavate Glutathione 500mg">
+
+  <h3 class="product-name">Glutavate Glutathione 500mg</h3>
+
+  <p class="product-price">Rs 2,850</p>
+<a class="product-btn"
+href="detail.html?name=Glutavate%20Glutathione%20500mg&price=2850&img=img/product14-cropped.jpg&front=img/product14-cropped%20(1).jpg&back=img/product14-cropped%20(2).jpg&desc=A%20powerful%20anti-oxidant%20formula%20to%20brighten%20skin,%20reduce%20dark%20spots,%20and%20achieve%20an%20even%20skin%20tone%20from%20within.%20It%20detoxifies%20the%20liver%20and%20boosts%20immunity%20for%20overall%20wellness.">
+View Details
+</a>
+</div>
+
+
+
+
+
+<!-- Product 15 -->
+<div class="product-card">
+  <img src="./img/product-15 (2).jpeg" class="product-img" alt="Kalsium-C Tablets by Jova">
+
+  <h3 class="product-name">Kalsium-C Tablets by Jova</h3>
+
+  <p class="product-price">Rs 960</p>
+
+  <a class="product-btn"
+  href="detail.html?name=Kalsium-C%20Tablets%20by%20Jova&price=960&img=img/product-15%20(2).jpeg&front=img/product-15%20(2).jpeg&back=img/product-15%20(2).jpeg&desc=A%20comprehensive%20bone%20health%20formula%20combining%20Algae%20Calcium,%20Magnesium,%20Zinc,%20Vitamin%20D3,%20Vitamin%20K2,%20Vitamin%20C,%20and%20Vitamin%20B6.%20Engineered%20for%20maximum%20absorption%20to%20maintain%20strong%20bones,%20healthy%20teeth,%20and%20joint%20flexibility.%20Pack%20Size:%2030%20Tablets%20(Calcium%20Supplement).">
+    View Details
+  </a>
+</div>
+
+<!-- Product 16 -->
+<div class="product-card">
+  <img src="./img/product16 (1).jpg" class="product-img" alt="Multibol Multivitamin & Minerals by Jova">
+
+  <h3 class="product-name">Multibol Multivitamin & Minerals by Jova</h3>
+
+  <p class="product-price">Rs 960</p>
+
+  <a class="product-btn"
+     href="detail.html?name=Multibol%20Multivitamin%20%26%20Minerals%20by%20Jova&price=960&img=img%2Fproduct16%20%281%29.jpg&front=img%2Fproduct16%20%281%29.jpg&back=img%2Fproduct16%20%281%29.jpg&desc=A%20complete%20daily%20health%20formula%20packed%20with%2019%20essential%20vitamins%2C%20minerals%2C%20Coenzyme%20Q10%2C%20and%20collagen.%20Designed%20to%20boost%20daily%20energy%2C%20strengthen%20immunity%2C%20and%20support%20bone%20vitality.">
+    View Details
+  </a>
+</div>
+
+
+
+<!-- Product 17 -->
+<div class="product-card">
+  <img src="img/product17.jpg" class="product-img" alt="Femistol Sachets by Jova">
+
+  <h3 class="product-name">Femistol Sachets by Jova</h3>
+
+  <p class="product-price">Rs 1,050</p>
+
+  <a class="product-btn"
+     href="detail.html?name=Femistol%20Sachets%20by%20Jova&price=1050&img=img%2Fproduct17.jpg&front=img%2Fproduct17.jpg&back=img%2Fproduct17.jpg&desc=An%20advanced%20reproductive%20and%20hormonal%20health%20formula%20combining%20Myo-Inositol%2C%20D-Chiro%20Inositol%2C%20Quatrefolic%2C%20Coenzyme%20Q10%2C%20Vitamin%20E%2C%20Vitamin%20D3%2C%20and%20Zinc.%20Pack%20Size%3A%2010%20Sachets%20%28Dietary%20Supplement%29.">
+    View Details
+  </a>
+</div>
+
+
+
+
+
+<!-- Product 18 -->
+<div class="product-card">
+  <img src="img/product18.jpg" class="product-img" alt="Caltop Calcium & Vitamin C Sachets by Jova">
+
+  <h3 class="product-name">Caltop Calcium & Vitamin C Sachets by Jova</h3>
+
+  <p class="product-price">Rs 250</p>
+
+  <a class="product-btn"
+     href="detail.html?name=Caltop%20Calcium%20%26%20Vitamin%20C%20Sachets%20by%20Jova&price=250&img=img%2Fproduct18.jpg&front=img%2Fproduct18.jpg&back=img%2Fproduct18.jpg&desc=A%20refreshing%2C%20orange-flavored%2C%20sugar-free%20dietary%20supplement%20combining%20plant-based%20Red%20Algae%20Calcium%20%281000mg%29%2C%20Vitamin%20C%20%28500mg%29%2C%20Vitamin%20D3%2C%20Vitamin%20K2%2C%20Magnesium%2C%20and%20Zinc.%20Specially%20formulated%20to%20support%20bone%20density%2C%20boost%20immunity%2C%20and%20maintain%20essential%20metabolic%20balance.%20Pack%20Size%3A%2010%20Sachets%20%28Orange%20Flavour%20%2F%20Sugar-Free%29.">
+    View Details
+  </a>
+</div>
+
+<!-- Product 19 -->
+<div class="product-card">
+  <img src="img/product19.jpg" class="product-img" alt="JOVA Neem Soap 75g">
+
+  <h3 class="product-name">JOVA Neem Soap (75g)</h3>
+
+  <p class="product-price">Rs 250</p>
+
+  <a class="product-btn"
+     href="detail.html?name=JOVA%20Neem%20Soap%20%2875g%29&price=250&img=img%2Fproduct19.jpg&front=img%2Fproduct19.jpg&back=img%2Fproduct19.jpg&desc=JOVA%20Neem%20Soap%20%2875g%29%20is%20a%20deep-cleansing%20formula%20designed%20to%20help%20protect%20skin%20from%20acne%2C%20pimples%2C%20and%20excess%20oil.%20Enriched%20with%20Neem%2C%20Salicylic%20Acid%2C%20and%20Sulfur.%20Pack%20Size%3A%2075g.">
+    View Details
+  </a>
+</div>
+
+
+<!-- Product 20 -->
+<div class="product-card">
+  <img src="img/product20.jpg" class="product-img" alt="Scabloss Bar by Jova (75g)">
+
+  <h3 class="product-name">Scabloss Bar by Jova (75g)</h3>
+
+  <p class="product-price">Rs 295</p>
+
+  <a class="product-btn"
+     href="detail.html?name=Scabloss%20Bar%20by%20Jova%20%2875g%29&price=295&img=img%2Fproduct20.jpg&front=img%2Fproduct20.jpg&back=img%2Fproduct20.jpg&desc=A%20specialized%20medicated%20soap%20formulated%20for%20relief%20and%20protection%20against%20scabies%2C%20pediculosis%2C%20and%20fungal%20skin%20infections.%20Net%20Weight%3A%2075g.">
+    View Details
+  </a>
+</div>
+
+
+
+
+
+  </div>
+</section>
+
+<div class="view-all-wrapper">
+  <a href="product.html" class="view-all-btn">View All Products</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Why Choose Us Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px; margin: 0 auto 50px;">
+            <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Why Choose Us</div>
+            <h2 class="mb-4">Why People Trust Jova Store  </h2>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="row g-4">
+
+            <!-- Feature 1 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item text-center p-4 rounded shadow-sm">
+                    <div class="btn-square bg-primary rounded-circle mb-3 d-flex align-items-center justify-content-center" style="width:90px; height:90px; margin:0 auto;">
+                        <i class="fa fa-pills text-white fa-2x"></i>
+                    </div>
+                    <h5>Genuine Medicines</h5>
+                    <span class="text-muted">We provide 100% authentic medicines from trusted brands to ensure your safety.</span>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-item text-center p-4 rounded shadow-sm">
+                    <div class="btn-square bg-primary rounded-circle mb-3 d-flex align-items-center justify-content-center" style="width:90px; height:90px; margin:0 auto;">
+                        <i class="fa fa-truck text-white fa-2x"></i>
+                    </div>
+                    <h5>Fast Delivery</h5>
+                    <span class="text-muted">Quick and safe delivery of medicines right to your doorstep.</span>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item text-center p-4 rounded shadow-sm">
+                    <div class="btn-square bg-primary rounded-circle mb-3 d-flex align-items-center justify-content-center" style="width:90px; height:90px; margin:0 auto;">
+                        <i class="fa fa-stethoscope text-white fa-2x"></i>
+                    </div>
+                    <h5>Expert Consultation</h5>
+                    <span class="text-muted">Get professional advice from qualified pharmacists on all health-related queries.</span>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-item text-center p-4 rounded shadow-sm">
+                    <div class="btn-square bg-primary rounded-circle mb-3 d-flex align-items-center justify-content-center" style="width:90px; height:90px; margin:0 auto;">
+                        <i class="fa fa-heartbeat text-white fa-2x"></i>
+                    </div>
+                    <h5>Wellness Products</h5>
+                    <span class="text-muted">Wide range of vitamins, supplements, and personal care items to support your health.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Why Choose Us End -->
+
+
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Testimonial</div>
+            <h2 class="mb-5">What Our Clients Say!</h2>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>"Jova Store always provides genuine and high-quality medicines. The delivery is fast and reliable!"</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" alt="Client">
+                    <div class="ps-3">
+                        <h6 class="mb-1">Ahmed Ali</h6>
+                        <small>Lahore, Pharmacist</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>"I always choose Jova Store for vitamins and personal care products. Highly recommended!"</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" alt="Client">
+                    <div class="ps-3">
+                        <h6 class="mb-1">Fatima Khan</h6>
+                        <small>Karachi, Home User</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>"For emergency medical supplies and first-aid items, Jova Store is the best. The 24/7 support is very helpful."</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" alt="Client">
+                    <div class="ps-3">
+                        <h6 class="mb-1">Usman Shah</h6>
+                        <small>Islamabad, Clinic Owner</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-item rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>"Jova Store's fast delivery and genuine products made maintaining my family's health routine so much easier."</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg" alt="Client">
+                    <div class="ps-3">
+                        <h6 class="mb-1">Sara Malik</h6>
+                        <small>Multan, Home User</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer-section">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Logo & Tagline -->
+      <div class="footer-block footer-logo">
+        <img src="img/logo.png" alt="Jova Store Logo" class="footer-logo-img">
+        <p class="footer-tagline">
+          💊 Stay Healthy with Genuine Medicines – Order Online from Jova Store! 🚚
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-block footer-links">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/shipping-policy.html">Shipping Policy</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Contact Info -->
+      <div class="footer-block footer-contact">
+        <h4 class="footer-heading">Contact Us</h4>
+        <p>📍 Address: Karachi, Pakistan</p>
+        <p>📞 Phone / WhatsApp: <strong>0321 2776705</strong></p>
+        <p>🕒 Mon – Sat | 10:00 AM – 8:00 PM</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-block footer-social">
+        <h3 class="footer-heading">Follow Us</h3>
+
+        <div class="footer-icons">
+          <a href="https://wa.me/923212776705" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+
+          <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+        </div>
+      </div>
+
+    </div>
+ <div class="footer-bottom">
+  <p>© <span id="year"></span> <strong>Jova Store</strong>. All Rights Reserved.</p>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <script>
+  const carouselImages = document.getElementById("carousel-images");
+  const slides = carouselImages.querySelectorAll("img");
+  let index = 0;
+
+  function slideBanner() {
+    index++;
+
+    if (index >= slides.length) {
+      index = 0;
+    }
+
+    carouselImages.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(slideBanner, 3000); // slide every 3 seconds
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

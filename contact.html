@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BizConsult - Consulting HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+
+
+
+
+
+ <style>
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+ /* 🔹 Top Moving Header */
+    .top-header-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #007B5E; /* Top header green */
+}
+
+.top-header {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+/* Make links black */
+.header-menu a,
+.header-actions a {
+  color: black !important;  /* override any inherited color */
+}
+
+/* Optional: hover effect for links */
+.header-menu a:hover {
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 5px;
+}
+
+/* ROWS */
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #00332A; /* optional border darker than header */
+}
+
+    .moving-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: moveText 18s linear infinite;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+
+    @keyframes moveText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* 🔹 Announcement Bar */
+    .announcement-bar {
+      position: relative;
+      overflow: hidden;
+      background-color: #f5f5f5;
+      border-bottom: 2px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .announcement-bar__inner {
+      display: flex;
+      gap: 50px;
+      white-space: nowrap;
+      position: relative;
+      left: 100%;
+    }
+
+    .announcement-bar__slide {
+      display: inline-block;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      padding: 0 10px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    @media screen and (max-width: 749px) {
+      .announcement-bar__inner {
+        gap: 20px;
+      }
+    }
+
+.header {
+  background-color: #ffffff;  
+  position: sticky;            /* scroll par chipka rahe */
+  top: 0;
+  z-index: 9999;               /* sab se upar rahe */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* soft shadow */
+}
+
+
+
+.navbar {
+  background-color: #ffffff !important; /* remove transparency */
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+    
+  /* ROWS */
+  .header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #005842; /* optional */
+  }
+
+  /* TRANSPARENT HEADER */
+ 
+
+  /* COLUMNS */
+  .header__column {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header__column--center {
+    justify-content: center;
+    flex: 1;
+  }
+
+  .header__column--right {
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  /* LOGO */
+  .header-logo img {
+    height: 50px;
+  }
+
+  /* MENU */
+  .header-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .header-menu a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+  }
+
+  /* ACTIONS */
+  .header-actions a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .header__row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header__column--center {
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .header-actions a i {
+  font-size: 18px; /* adjust icon size */
+  margin-right: 5px; /* space between icon and text */
+  color: black; /* match header text */
+}
+
+
+    .moving-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: moveText 18s linear infinite;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+
+    @keyframes moveText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* 🔹 Announcement Bar */
+    .announcement-bar {
+      position: relative;
+      overflow: hidden;
+      background-color: #f5f5f5;
+      border-bottom: 2px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .announcement-bar__inner {
+      display: flex;
+      gap: 50px;
+      white-space: nowrap;
+      position: relative;
+      left: 100%;
+    }
+
+    .announcement-bar__slide {
+      display: inline-block;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      padding: 0 10px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    @media screen and (max-width: 749px) {
+      .announcement-bar__inner {
+        gap: 20px;
+      }
+    }
+
+
+.footer-section {
+  background-color: #f8f8f8;
+  padding: 50px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-logo {
+  text-align: left;
+}
+
+.footer-logo-img {
+  width: 130px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 6px 0;
+}
+
+.footer-links ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #009970;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  display: block;
+  margin: 6px 0;
+  color: #000 !important;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #009970 !important;
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-logo-img {
+    margin: 0 auto 10px auto;
+  }
+
+  .footer-icons {
+    display: inline-block;
+  }
+}
+
+
+/* Contact Page - Mobile Header Fix */
+@media (max-width: 768px) {
+
+  .header__row {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .header-logo {
+    width: 100%;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .header-logo img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .header-menu {
+    width: 100%;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    margin-top: 5px;
+    flex-wrap: wrap;
+  }
+
+  .header-menu a {
+    text-align: center;
+  }
+}
+ </style>
+   
+
+
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+<!-- 🔹 Top Moving Header -->
+  <div class="top-header-wrapper">
+    <div class="top-header">
+      <div class="moving-text">
+        🚑 Stay Healthy with Genuine Medicines – Order Online Anytime! 🛍️ Free Delivery on Orders Above Rs.850 🚚 Fast Delivery All Over Pakistan
+      </div>
+    </div>
+  </div>
+
+
+
+<header class="header">
+  <div class="header__row">
+
+    <div class="header__column header__column--left header-logo">
+      <img src="img/logo.png" alt="Logo">
+    </div>
+
+    <div class="header__column header__column--center header-menu">
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+
+
+
+
+
+<!-- Contact Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Contact Jova Store</div>
+            <h2 class="mb-5">Have a Question About Medicines or Your Order?</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.3s">
+                <p class="text-center mb-4">
+                    Need help with medicine availability, dosage guidance, or order tracking?  
+                    Fill out the form below and our pharmacy support team will get back to you shortly.
+                </p>
+
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                <label for="name">Patient / Customer Name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                <label for="email">Email Address</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                <label for="subject">Medicine Name / Order Number</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                <label for="message">Your Message (Symptoms / Order Details)</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">
+                                Send Message to Us
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+<div class="footer-section">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Logo & Tagline -->
+      <div class="footer-block footer-logo">
+        <img src="img/logo.png" alt="Jova Store Logo" class="footer-logo-img">
+        <p class="footer-tagline">
+          💊 Stay Healthy with Genuine Medicines – Order Online from Jova Store! 🚚
+        </p>
+      </div>
+
+     <!-- Quick Links -->
+      <div class="footer-block footer-links">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/shipping-policy.html">Shipping Policy</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Contact Info -->
+      <div class="footer-block footer-contact">
+        <h4 class="footer-heading">Contact Us</h4>
+        <p>📍 Address: Karachi, Pakistan</p>
+        <p>📞 Phone / WhatsApp: <strong>0321 2776705</strong></p>
+        <p>🕒 Mon – Sat | 10:00 AM – 8:00 PM</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-block footer-social">
+        <h3 class="footer-heading">Follow Us</h3>
+
+        <div class="footer-icons">
+          <a href="https://wa.me/923212776705" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+
+          <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+   <div class="footer-bottom">
+  <p>© <span id="year"></span> <strong>Jova Store</strong>. All Rights Reserved.</p>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+  </div>
+</div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
